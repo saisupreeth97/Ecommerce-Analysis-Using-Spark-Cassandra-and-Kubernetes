@@ -83,6 +83,11 @@ Now again, open the terminal of the spark master node in the Kubernetes dashboar
 •	./bin/spark-submit --class com.dbproject.ecommerceanalysis.EcommerceAnalysisApplication --master spark://spark-release-master-0.spark-release-headless.default.svc.cluster.local:7077 --num-executors 2 --driver-memory 1g --driver-cores 1 --executor-memory 3g --executor-cores 3 myjars/ecommerce-analysis-0.0.1-SNAPSHOT-all.jar [ip address of the database] "9042" "electronics.smartphone" "purchase"
 In the above command first command line argument is the port IP address of the database; we can the IP address of Cassandra using the following kubectl command:
 •	kubectl get pods -o wide
+Below is the screenshot for the sample:
 
+<img width="867" alt="Screenshot 2023-05-14 at 7 04 03 PM" src="https://github.com/saisupreeth97/Ecommerce-Analysis-Using-Spark-Cassandra-and-Kubernetes/assets/20046277/c69f5c79-4373-4a05-ba57-1c493eec25d8">
+
+In the above screenshot, we can see the cluster IP of the database that we need to pass as a command line argument in the master mode while submitting the spark job.
 The second argument in the spark-submit command is the port number of the database, which is by default “9042”. The third and fourth commands are the category_code and the event_type from the database, which filter the data accordingly.
 Once the spark job is done, the output is saved in the database automatically. We can see the results in the cqlsh of the Cassandra pod using the select command.
+
