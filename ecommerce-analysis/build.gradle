@@ -1,0 +1,46 @@
+plugins {
+	id 'java'
+	id 'application'
+	id 'com.github.johnrengelman.shadow' version '5.1.0'
+}
+
+group = 'com.dbproject'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+mainClassName='com.dbproject.ecommerceanalysis.EcommerceAnalysisApplication'
+
+//Repositories to download libraries
+repositories {
+	mavenCentral()
+	jcenter()
+	maven {
+		url "https://repo.datastax.com/public-repos/"
+	}
+}
+
+configurations {
+	provided
+}
+
+sourceSets {
+	main { compileClasspath += configurations.provided }
+}
+
+//Dependencies to run spark job
+dependencies {
+	provided group: 'org.apache.spark', name: 'spark-core_2.12', version: '3.4.0'
+	implementation 'com.datastax.spark:spark-cassandra-connector_2.12:3.3.0'
+//	implementation 'com.datastax.spark:spark-cassandra-connector-java_2.11:1.5.2'
+	provided 'org.apache.spark:spark-sql_2.12:3.4.0'
+//	compileOnly 'org.apache.spark:spark-streaming_2.11:2.2.0'
+	compileOnly 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+}
+
+//to create shadow jar file
+shadowJar {
+	manifest {
+		attributes 'Main-Class': mainClassName
+	}
+	zip64 true
+}
