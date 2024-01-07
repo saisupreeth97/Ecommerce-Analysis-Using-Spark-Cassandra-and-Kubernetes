@@ -156,7 +156,7 @@ can the IP address of Cassandra using the following kubectl command:
 
 Below is the screenshot for the sample:
 
-https://private-user-images.githubusercontent.com/20046277/242178282-c69f5c79-4373-4a05-ba57-1c493eec25d8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDQ2NDgyNjYsIm5iZiI6MTcwNDY0Nzk2NiwicGF0aCI6Ii8yMDA0NjI3Ny8yNDIxNzgyODItYzY5ZjVjNzktNDM3My00YTA1LWJhNTctMWM0OTNlZWMyNWQ4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTA3VDE3MTkyNlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ1MThkOGFjOGYzZDBhZmU3ZGY4OWQ4MDAyMTUyMjg2ZjYxYWVlMzkwNWIyNDZhM2EzZWM2NGUxYTJkODA1ZGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.rEVbtBMau9LReuCm1iJJSlXTKlawvJ3tS-fewGM9qEw
+<img width="867" alt="Screenshot 2023-05-14 at 7 04 03 PM" src="https://github.com/saisupreeth97/Ecommerce-Analysis-Using-Spark-Cassandra-and-Kubernetes/assets/20046277/c69f5c79-4373-4a05-ba57-1c493eec25d8">
 
 In the above screenshot, we can see the cluster IP of the database that we need to pass as a command line argument in the master mode while submitting the spark job.
 
